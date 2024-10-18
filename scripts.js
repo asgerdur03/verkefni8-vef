@@ -16,3 +16,17 @@ const stringWithWhitespace = `halló
 hæ`;
 const split = splitOnWhitespace(stringWithWhitespace);
 console.log(split);
+
+
+const textareaElement = document.querySelector('textarea');
+console.log(textareaElement);
+
+const formElement = document.querySelector('form');
+
+function submitHandler(event) {
+  event.preventDefault();
+  const { target } = event;
+  const textareaElement = target.querySelector('textarea');
+  console.log('textareaElement inniheldur:', textareaElement.value);}
+
+formElement.addEventListener('submit', submitHandler);
